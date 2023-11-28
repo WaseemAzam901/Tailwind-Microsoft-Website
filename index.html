@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./input.css" />
     <title>Document</title>
   </head>
-  <body class="2xl:mx-36">
+  <body class="2xl:mx-28">
     <div class="container mx-auto">
       <nav>
         <div class="navbar flex justify-between items-center px-1 py-2">
@@ -16,12 +16,17 @@
               <div class="line2 h-0.5 w-6 my-1 bg-black"></div>
               <div class="line3 h-0.5 w-6 my-1 bg-black"></div>
             </div>
-            <div class="md:hidden w-5 h-5"><img src="./assets/search.svg" alt=""></div>
+            <div class="md:hidden w-5 h-5">
+              <img src="./assets/search.svg" alt="" />
+            </div>
           </div>
           <div class="logo flex text-center md:order-1">
-            <div class="w-28"><img src="./Pictures/logo.png" alt="" /></div>
+            <div class="w-28 flex items-center">
+              <img src="./Pictures/logo.png" alt="" />
+            </div>
+            <!-- <hr class="w-6 border-t-2 border-black my-5 ml-4 transform rotate-90 font-bold"> -->
             <div
-              class="features absolute top-12 -left-52 md:left-12 md:static md:flex md:flex-row"
+              class="features absolute top-12 -left-52 md:left-12 md:static md:flex md:flex-row ml-4 text-sm"
             >
               <div class="fitem md:p-2">Microsoft 365</div>
               <div class="fitem md:p-2">Office</div>
@@ -32,16 +37,25 @@
             </div>
           </div>
           <div class="flex md:order-3">
-            <div class="hidden md:block px-2 py-3 w-9 h-9"><img src="./assets/search.svg" alt=""></div>
-            <div class="signin p-2">SignIn</div>
-            <div class="cart-account p-2">Cart</div>
+            <div class="signin p-2 hidden md:block">All Microsoft</div>
+            <div class="hidden md:block px-2 py-3 w-9 h-9">
+              <img src="./assets/search.svg" alt="" />
+            </div>
+            <div class="signin p-2 hidden md:block">Cart</div>
+            <div class="cart-account p-3">
+              <img src="./assets/cart icon.svg" alt="" class="w-5 h-5" />
+            </div>
+            <div class="signin p-2 hidden md:block">SignIn</div>
+            <div class="signin p-2">
+              <img src="./assets/account icon.svg" alt="" />
+            </div>
           </div>
         </div>
       </nav>
 
       <div class="slider flex flex-col-reverse md:flex-row bg-[#f2f2f2] mx-2">
         <div
-          class="left flex flex-col justify-center items-center md:items-baseline py-12"
+          class="left flex flex-col justify-center items-center md:items-baseline py-12 lg:ml-32 lg:space-y-5"
         >
           <h3 class="text-2xl font-medium md:text-4xl mx-5">
             Surface Laptop 5
@@ -58,22 +72,24 @@
           <img class="w-[64rem]" src="./Pictures/ms.webp" alt="" />
         </div>
       </div>
-      <div class="Promo space-x-3 space-y-3 flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        <div class="PromoItem flex items-center mx-3 my-3">
+      <div
+        class="Promo space-x-4 mt-5 space-y-5 lg:space-y-0 flex flex-col lg:flex-row lg:justify-center content-start"
+      >
+        <div class="PromoItem flex items-center lg:flex-col mx-5">
           <img src="./assets/ic1.png" alt="" />
-          <span>Choose your Microsoft 365</span>
+          <span class="lg:w-32 lg:text-center">Choose your Microsoft 365</span>
         </div>
-        <div class="PromoItem flex items-center">
+        <div class="PromoItem flex items-center lg:flex-col">
           <img src="./assets/ic2.webp" alt="" />
-          <span>Explore Surface devices</span>
+          <span class="lg:w-32 lg:text-center">Explore Surface devices</span>
         </div>
-        <div class="PromoItem flex items-center">
+        <div class="PromoItem flex items-center lg:flex-col">
           <img src="./assets/ic3.webp" alt="" />
-          <span>Buy Xbox games</span>
+          <span class="lg:w-32 lg:text-center">Buy Xbox games</span>
         </div>
-        <div class="PromoItem flex items-center">
+        <div class="PromoItem flex items-center lg:flex-col">
           <img src="./assets/ic4.png" alt="" />
-          <span>Get Windows 11</span>
+          <span class="lg:w-32 lg:text-center">Get Windows 11</span>
         </div>
       </div>
     </div>
