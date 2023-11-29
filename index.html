@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="./input.css" />
     <title>Document</title>
   </head>
-  <body class="2xl:mx-28">
-    <div class="container mx-auto">
-      <nav>
+  <body>
+    <div class="md:container md:mx-auto">
+      <nav class="lg:mx-20">
         <div class="navbar flex justify-between items-center px-1 py-2">
           <div class="flex justify-center items-center md:order-2">
-            <div class="hamburger-menu md:hidden p-4">
+            <div class="toggle-button hamburger-menu md:hidden p-4">
               <div class="line1 h-0.5 w-6 my-1 bg-black"></div>
               <div class="line2 h-0.5 w-6 my-1 bg-black"></div>
               <div class="line3 h-0.5 w-6 my-1 bg-black"></div>
@@ -21,31 +21,31 @@
             </div>
           </div>
           <div class="logo flex text-center md:order-1">
-            <div class="w-28 flex items-center">
+            <div class="w-28 lg:w-36 flex items-center">
               <img src="./Pictures/logo.png" alt="" />
             </div>
             <!-- <hr class="w-6 border-t-2 border-black my-5 ml-4 transform rotate-90 font-bold"> -->
             <div
-              class="features absolute top-12 -left-52 md:left-12 md:static md:flex md:flex-row ml-4 text-sm"
+              class="dropdown-menu features absolute bg-[#f2f2f2] md:bg-white -top-full w-full -left-2 md:left-12 md:hidden  lg:static lg:flex lg:flex-row text-left text-sm"
             >
-              <div class="fitem md:p-2">Microsoft 365</div>
-              <div class="fitem md:p-2">Office</div>
-              <div class="fitem md:p-2">Windows</div>
-              <div class="fitem md:p-2">Surface</div>
-              <div class="fitem md:p-2">Xbox</div>
-              <div class="fitem md:p-2">Support</div>
+              <div class="fitem py-4 pl-6 pr-4 md:p-2 border-solid border-2 border-[#e6e6e6] border-b-0 md:border-0 hover:underline hover:underline-offset-8 hover:cursor-pointer">Microsoft 365</div>
+              <div class="fitem py-4 pl-6 pr-4 md:p-2 border-solid border-2 border-[#e6e6e6] border-b-0 md:border-0 hover:underline hover:underline-offset-8 hover:cursor-pointer">Office</div>
+              <div class="fitem py-4 pl-6 pr-4 md:p-2 border-solid border-2 border-[#e6e6e6] border-b-0 md:border-0 hover:underline hover:underline-offset-8 hover:cursor-pointer">Windows</div>
+              <div class="fitem py-4 pl-6 pr-4 md:p-2 border-solid border-2 border-[#e6e6e6] border-b-0 md:border-0 hover:underline hover:underline-offset-8 hover:cursor-pointer">Surface</div>
+              <div class="fitem py-4 pl-6 pr-4 md:p-2 border-solid border-2 border-[#e6e6e6] border-b-0 md:border-0 hover:underline hover:underline-offset-8 hover:cursor-pointer">Xbox</div>
+              <div class="fitem py-4 pl-6 pr-4 md:p-2 border-solid border-2 border-[#e6e6e6] md:border-0 hover:underline hover:underline-offset-8 hover:cursor-pointer">Support</div>
             </div>
           </div>
           <div class="flex md:order-3">
-            <div class="signin p-2 hidden md:block">All Microsoft</div>
+            <div class="signin p-2 hidden md:block hover:underline hover:underline-offset-8 hover:cursor-pointer">All Microsoft</div>
             <div class="hidden md:block px-2 py-3 w-9 h-9">
               <img src="./assets/search.svg" alt="" />
             </div>
-            <div class="signin p-2 hidden md:block">Cart</div>
-            <div class="cart-account p-3">
+            <div class="signin pt-2 pl-2 hidden md:block hover:underline hover:underline-offset-8 hover:cursor-pointer">Cart</div>
+            <div class="cart-account pt-3 pr-4 pl-2">
               <img src="./assets/cart icon.svg" alt="" class="w-5 h-5" />
             </div>
-            <div class="signin p-2 hidden md:block">SignIn</div>
+            <div class="signin pt-2 pl-2 hidden md:block hover:underline hover:underline-offset-8 hover:cursor-pointer">SignIn</div>
             <div class="signin p-2">
               <img src="./assets/account icon.svg" alt="" />
             </div>
@@ -93,5 +93,13 @@
         </div>
       </div>
     </div>
+    <script>
+      const toggleBtn = document.querySelector(".toggle-button");
+      const dropdown = document.querySelector(".dropdown-menu");
+      toggleBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("top-16");
+        console.log("hello");
+      });
+    </script>
   </body>
 </html>
